@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dani's Bakes - Order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Dani's Bakes Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a class="order-btn active" aria-current="page" href="order.html">Order Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header text-center py-5 bg-light">
+    <h1>Place Your Order</h1>
+    <p>Fill out the form below to order your favorite baked goods from Dani's Bakes.</p>
+  </header>
+
+  <!-- Order Form Section -->
+  <main class="container my-5">
+    <form class="order-form" novalidate id="orderForm">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="fullName" class="form-label">Full Name<span class="text-danger">*</span></label>
+          <input type="text" id="fullName" class="form-control" placeholder="Your full name" required />
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+          <input type="email" id="email" class="form-control" placeholder="Your email address" required />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone Number<span class="text-danger">*</span></label>
+          <input type="tel" id="phone" class="form-control" placeholder="Your phone number" required />
+        </div>
+        <div class="col-md-6">
+          <label for="product" class="form-label">Select Product<span class="text-danger">*</span></label>
+          <select id="product" class="form-select" required>
+            <option value="" disabled selected>Select a product</option>
+            <option value="artisan-bread">Artisan Bread</option>
+            <option value="butter-croissants">Butter Croissants</option>
+            <option value="chocolate-fudge-cake">Chocolate Fudge Cake</option>
+            <option value="cinnamon-rolls">Cinnamon Rolls</option>
+            <option value="vegan-muffins">Vegan Blueberry Muffins</option>
+          </select>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity<span class="text-danger">*</span></label>
+        <input type="number" id="quantity" class="form-control" min="1" value="1" required />
+      </div>
+      <div class="mb-3">
+        <label for="instructions" class="form-label">Special Instructions</label>
+        <textarea id="instructions" class="form-control" rows="4" placeholder="Any special requests or instructions"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Order</button>
+    </form>
+    <div id="thankYouMessage" class="alert alert-success mt-4 d-none" role="alert">
+      Thank you for your order! We will get back to you shortly.
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer bg-dark text-white py-5 mt-auto">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 footer-col mb-4">
+          <div class="footer-logo">
+            <h3>Dani's Bakes</h3>
+            <p>Premium artisanal bakery in Gaborone, Botswana. Handcrafted with love since 2010.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-col mb-4">
+          <h5 class="footer-section-title">Quick Links</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="order.html">Order Now</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-col mb-4">
+          <h5 class="footer-section-title">Contact Us</h5>
+          <ul class="contact-info list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>123 Bakery Street, Gaborone, Botswana</li>
+            <li><i class="fas fa-phone me-2"></i>+267 7703 3812</li>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="copyright text-center pt-3">
+            &copy; 2025 Dani's Bakes. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
